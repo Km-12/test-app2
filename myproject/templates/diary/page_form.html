@@ -1,0 +1,18 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+
+<div class="form-page">
+    <h2>日記を書く</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <!-- ボタンを横並びにするためのコンテナ -->
+        <div class="buttons-container">
+            <button type="submit" v-on:click="confirmSave">保存</button>
+            <a href="{% url 'diary:index' %}">戻る</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

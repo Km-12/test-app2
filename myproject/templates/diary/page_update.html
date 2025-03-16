@@ -1,0 +1,37 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+
+<div class="form-page">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- タイトル -->
+        <div class="form-field">
+            <label for="{{ form.title.id }}">タイトル</label>
+            {{ form.title }}
+        </div>
+
+        <!-- 本文 -->
+        <div class="form-field">
+            <label for="{{ form.body.id }}">本文</label>
+            {{ form.body }}
+        </div>
+
+        <!-- 日付 -->
+        <div class="form-field">
+            <label for="{{ form.page_date.id }}">日付</label>
+            {{ form.page_date }}
+        </div>
+
+        <div class="form-field">
+            {{ form.picture }}
+        </div>
+
+        <div class="buttons-container">
+            <button type="submit">更新</button>
+            <a href="{% url 'diary:page_detail' page.id %}">戻る</a>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>普通の日記</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'diary/css/base.css' %}">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="{% static 'diary/js/base.js' %}"></script>
+</head>
+
+<body>
+    <div>
+        <h1>普通の日記</h1>
+        {% block body %}
+        {% endblock %}
+    </div>
+</body>
+
+</html>

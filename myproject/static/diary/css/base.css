@@ -1,0 +1,322 @@
+/* base.css */
+
+/* 全体のスタイル */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #4a90e2;
+}
+
+/* ログインページ専用のスタイル */
+.login-page {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-page h2 {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.login-page form {
+    padding: 30px;
+}
+
+/* 各フォームのスタイル */
+.login-page input {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* フォーカス時のスタイル */
+.login-page input:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* ボタンのスタイル */
+.login-page button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ボタンホバー時のスタイル */
+.login-page button:hover {
+    background-color: #357ab7;
+    transform: translateY(-2px);
+}
+
+/* メインページ専用のスタイル */
+.main-page {
+    max-width: 450px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* メインページのヘッダ */
+.main-page h2 {
+    font-size: 25px;
+    color: #4a90e2;
+    margin-bottom: 10px;
+}
+
+/* 日記を書く、ページ一覧リンク */
+.main-page a {
+    display: block;
+    font-size: 1.2rem;
+    color: #4a90e2;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.main-page a:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+/* ログアウトボタンのスタイル */
+.main-page .logout-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* ボタンホバー時のスタイル */
+.main-page .logout-button:hover {
+    background-color: #d32f2f;
+    transform: translateY(-2px);
+}
+
+/* 記事フォームページと編集ページ */
+.form-page {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* ボタンを横並びにするためにflexを使う */
+.form-page .buttons-container {
+    display: flex;
+    justify-content: space-between; /* ボタンを両端に配置 */
+    gap: 10px; /* ボタンの間に隙間を作る */
+}
+
+/* フォーム入力フィールド */
+.form-page input, .form-page textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+/* フォームボタン */
+.form-page button {
+    width: 15%; /* ボタンが横並びにするための幅設定 */
+    padding: 12px;
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* ボタンのホバー時 */
+.form-page button:hover {
+    background-color: #357ab7;
+    transform: translateY(-2px);
+}
+
+.buttons-container a {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.buttons-container a:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+/* 日記リストページ */
+.page-list {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.page-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.page-list li {
+    margin-bottom: 10px;
+}
+
+.page-list a {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.page-list a:hover {
+    background-color: #4a90e2;
+    color: #fff;
+}
+
+/* フォームフィールドのスタイル */
+.form-field {
+    margin-bottom: 20px;
+}
+
+/* クリアのチェックボックスとラベルを非表示 */
+.form-field input[type="checkbox"], label[for$="picture-clear_id"] {
+    display: none;
+}
+
+/* 日記詳細ページ */
+.page-detail {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.page-detail h2 {
+    font-size: 25px;
+    color: #4a90e2;
+    margin-bottom: 15px;
+}
+
+.page-detail img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* 削除確認ページ */
+.page-confirm-delete {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.page-confirm-delete p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.page-confirm-delete button {
+    width: 25%;
+    padding: 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.page-confirm-delete button:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .form-page, .page-list, .page-detail, .page-confirm-delete {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .form-page h2, .page-list h2, .page-detail h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-page button, .page-list button, .page-detail button, .page-confirm-delete button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-page h2, .page-list h2, .page-detail h2 {
+        font-size: 1.5rem;
+    }
+
+    .page-list a {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,21 @@
+{% extends "base/diary_base.html" %}
+{% block body %}
+
+<div class="page-confirm-delete">
+    <form method="POST">
+        {% csrf_token %}
+        <p>このページを削除してよろしいでしょうか？</p>
+        <div class="buttons-container">
+            <button type="submit">削除</button>
+            <a href="{% url 'diary:page_detail' page.id %}">戻る</a>
+        </div>
+    </form>
+    <h2>{{ page.title }}</h2>
+    <div>{{ page.page_date }}</div>
+    <div>{{ page.body | linebreaksbr }}</div>
+    {% if page.picture %}
+    <img src="{{ page.picture.url }}" />
+    {% endif %}
+</div>
+
+{% endblock %}

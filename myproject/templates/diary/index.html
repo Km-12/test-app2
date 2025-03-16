@@ -1,0 +1,14 @@
+{% extends "base/diary_base.html" %}
+
+{% block body %}
+<div class="main-page">
+    <form action="{% url 'accounts:logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="logout-button">ログアウト</button>
+    </form>
+    <h2>～ようこそ、日常の出来事を気ままに～</h2>
+    <h3 id="datetime_now"></h3>
+    <a href="{% url 'diary:page_create' %}">日記を書く</a>
+    <a href="{% url 'diary:page_list' %}">ページ一覧</a>
+</div>
+{% endblock %}

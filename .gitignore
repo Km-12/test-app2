@@ -1,0 +1,5 @@
+develop/
+
+*.pyc
+
+*/__pycache__/
