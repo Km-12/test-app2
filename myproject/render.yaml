@@ -1,17 +1,13 @@
 services:
   - type: web
-    plan: free
     name: myblog
-    runtime: python
-    buildCommand: "./build.sh"
+    env: python
+    buildCommand: './build.sh'
     startCommand: 'gunicorn myproject.wsgi:application'
+    plan: free
+    branch: main
     envVars:
-      - key: DATABASE_URL
-        fromDatabase:
-          name: mysitedb
-          property: connectionString
       - key: SECRET_KEY
         generateValue: true
       - key: WEB_CONCURRENCY
         value: 4
-    autoDeploy: true
